@@ -9,6 +9,8 @@ socket.on('connection', function(client) {
   // Member joins the room
   client.on('join', function(name){
     people[client.id] = name;
+    // client.emit() only updates this user
+    // sockets.emit updates for all connected users
     client.emit('update', name + ' , you have joined this chat.');
   
     socket.sockets.emit('update', name + ' has joined the room.')
@@ -22,7 +24,7 @@ socket.on('connection', function(client) {
 
   // Member disconnects from the server
   client.on('disconnect', function() {
-    socket.sockets.emit('update', people[client.id] + ' has left the room.");
+    socket.sockets.emit('update', people[client.id] + ' has left the room.');
     delete people[client.id];
     socket.sockets.emit('update-people', people);
   });
