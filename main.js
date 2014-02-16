@@ -46,7 +46,7 @@ $(function(){
 
   socket.on("chat", function(who, msg){
     if(ready) {
-      $("#msgs").append("" + who + " says: " + msg + "");
+      $("#msgs").append("<li><strong><span class='text-success'>" + who + "</span></strong> says: " + msg + "</li>");
     }
   });
 

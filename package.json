@@ -1,0 +1,27 @@
+{
+  "name": "simple_chat",
+  "preferGlobal": true,
+  "version": "0.0.1",
+  "author": "Jamal O'Garro",
+  "description": "A simple real-time chat using socket.io",
+  "contributors": [ 
+    {
+      "name": "Jamal O'Garro",
+      "email": "jamal.ogarro[at]gmail.com"
+    } 
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsogarro/simple_chat"
+  },
+  "keywords": [
+    "node",
+    "http",
+    "socket.io",
+    "real-time",
+    "chat"
+  ],
+  "dependencies" : {
+    "socket.io": "latest"
+  }
+}
